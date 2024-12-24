@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>圣诞节快乐</title>
+    <style>
+        body {
+            background-color: #1a472a;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            position: relative;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .photo-gallery img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            border: 3px solid #gold;
+        }
+        .photo-gallery img:hover {
+            transform: scale(1.1);
+        }
+        h1 {
+            color: #ff0000;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: glow 2s ease-in-out infinite alternate;
+            font-size: 48px;
+        }
+        .music-player {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        /* 新添加的样式 */
+        .snowflake {
+            position: fixed;
+            color: white;
+            font-size: 30px;
+            animation: fall linear infinite;
+            z-index: 1000;
+        }
+        
+        @keyframes fall {
+            0% { transform: translateY(-100vh); }
+            100% { transform: translateY(100vh); }
+        }
+        
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff0000;
+            }
+            to {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff0000;
+            }
+        }
+        
+        .christmas-tree {
+            font-size: 48px;
+            margin: 20px 0;
+            animation: swing 2s ease-in-out infinite;
+        }
+        
+        @keyframes swing {
+            0%, 100% { transform: rotate(-3deg); }
+            50% { transform: rotate(3deg); }
+        }
+        
+        /* 添加新的样式 */
+        .floating-decoration {
+            position: fixed;
+            font-size: 60px;
+            animation: swing 2s ease-in-out infinite;
+        }
+
+        /* 为不同位置的���饰设置不同的动画延迟 */
+        .decoration-delay-1 { animation-delay: 0.5s; }
+        .decoration-delay-2 { animation-delay: 1s; }
+        .decoration-delay-3 { animation-delay: 1.5s; }
+        .decoration-delay-4 { animation-delay: 2s; }
+
+        /* 添加可爱字体 */
+        @font-face {
+            font-family: 'MaShanZheng';
+            src: url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap');
+        }
+
+        .christmas-wish {
+            font-family: 'MaShanZheng', cursive;
+            font-size: 36px;
+            color: #ff6b6b;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.3);
+            margin: 30px 0;
+        }
+
+        .big-gift {
+            font-size: 108px; /* 原来36px的3倍 */
+            display: inline-block;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .big-gift:hover {
+            transform: scale(1.1);
+        }
+
+        .gift-hint {
+            font-size: 24px;
+            color: #ffd700;
+            animation: blink 1s infinite;
+            margin-left: 20px;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎄 平安夜快乐 🎄</h1>
+        
+        <div class="christmas-tree">
+            🎄✨🎁
+        </div>
+        
+        <!-- 重新分布装饰元素 -->
+        <div class="floating-decoration decoration-delay-1" style="top: 3%; left: 3%;">🎄</div>
+        <div class="floating-decoration decoration-delay-2" style="top: 12%; right: 3%;">🎅</div>
+        <div class="floating-decoration decoration-delay-3" style="top: 28%; left: 5%;">⭐</div>
+        <div class="floating-decoration decoration-delay-4" style="top: 42%; right: 6%;">🎁</div>
+        <div class="floating-decoration decoration-delay-1" style="top: 58%; left: 4%;">🦌</div>
+        <div class="floating-decoration decoration-delay-2" style="top: 72%; right: 5%;">❄️</div>
+        <div class="floating-decoration decoration-delay-3" style="top: 88%; left: 7%;">🎄</div>
+        <div class="floating-decoration decoration-delay-4" style="top: 18%; left: 20%;">🔔</div>
+        <div class="floating-decoration decoration-delay-1" style="top: 35%; right: 18%;">⛄</div>
+        <div class="floating-decoration decoration-delay-2" style="top: 82%; right: 22%;">✨</div>
+        
+        <!-- 新增的装饰元素更均匀分布 -->
+        <div class="floating-decoration decoration-delay-3" style="top: 8%; left: 35%;">🎄</div>
+        <div class="floating-decoration decoration-delay-4" style="top: 25%; right: 32%;">🎅</div>
+        <div class="floating-decoration decoration-delay-1" style="top: 52%; left: 38%;">⭐</div>
+        <div class="floating-decoration decoration-delay-2" style="top: 75%; right: 36%;">🎁</div>
+        <div class="floating-decoration decoration-delay-3" style="top: 15%; left: 8%;">🦌</div>
+        <div class="floating-decoration decoration-delay-4" style="top: 62%; right: 8%;">❄️</div>
+        <div class="floating-decoration decoration-delay-1" style="top: 32%; left: 12%;">🔔</div>
+        <div class="floating-decoration decoration-delay-2" style="top: 48%; right: 42%;">⛄</div>
+        <div class="floating-decoration decoration-delay-3" style="top: 92%; left: 28%;">✨</div>
+        <div class="floating-decoration decoration-delay-4" style="top: 5%; right: 25%;">🎄</div>
+
+        <div class="music-player">
+            <video controls autoplay loop muted width="600">
+                <source src="christmas-video.mp4" type="video/mp4">
+                您的浏览器不支持视频播��
+            </video>
+            <video controls autoplay loop muted width="307">
+                <source src="christmas-video2.mp4" type="video/mp4">
+                您的浏览器不支持视频播放
+            </video>
+        </div>
+
+        <!-- 修改祝福语 -->
+        <p class="christmas-wish">
+            宝贝圣诞节快乐！
+            <span class="big-gift" onclick="window.location.href='gift.html'">🎁</span>
+            <span class="gift-hint">👈 点我有礼物</span>
+        </p>
+    </div>
+
+    <script>
+        // 修改雪花效果
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            snowflake.innerHTML = '❄';
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.animationDuration = Math.random() * 2 + 1 + 's';
+            document.body.appendChild(snowflake);
+            
+            setTimeout(() => {
+                snowflake.remove();
+            }, 5000);
+        }
+        
+        // 增加雪花生成频率
+        setInterval(createSnowflake, 100);
+    </script>
+</body>
+</html> 
